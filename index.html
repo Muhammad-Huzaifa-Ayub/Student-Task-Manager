@@ -9,19 +9,62 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1>Student Task Manager</h1>
-        <p>Manage your daily study tasks.</p>
 
-        <div class="task-input">
-            <input type="text" id="taskInput" placeholder="Enter a new task">
-            <button onclick="addTask()">Add Task</button>
+    <div class="container">
+
+        <h1>Student Task Manager</h1>
+        <p>Manage your daily study tasks</p>
+
+        <!-- Subjects -->
+        <h3>My Subjects</h3>
+
+        <div>
+            <button>Math</button>
+            <button>English</button>
+            <button>Science</button>
+            <button>Computer</button>
         </div>
 
+        <br>
+
+        <!-- Add Task -->
+        <div class="task-input">
+            <input type="text" id="taskInput" placeholder="Enter a new task...">
+
+            <button onclick="addTask()">
+                Add Task
+            </button>
+        </div>
+
+        <!-- Search -->
+        <input type="text" id="searchInput" class="search" placeholder="Search tasks..." oninput="displayTasks()">
+
+        <!-- Filters -->
+        <div class="filters">
+            <button onclick="setFilter('all')">All</button>
+            <button onclick="setFilter('pending')">Pending</button>
+            <button onclick="setFilter('completed')">Completed</button>
+        </div>
+
+        <!-- Task Counter -->
+        <div class="task-info">
+            <span>Total: <strong id="totalTasks">0</strong></span>
+            <span>Completed: <strong id="completedTasks">0</strong></span>
+            <span>Pending: <strong id="pendingTasks">0</strong></span>
+        </div>
+
+        <!-- Task List -->
         <ul id="taskList"></ul>
+
+        <!-- Clear All -->
+        <button class="clear-btn" onclick="clearAllTasks()">
+            Clear All Tasks
+        </button>
+
     </div>
 
     <script src="script.js"></script>
+
 </body>
 
 </html>
