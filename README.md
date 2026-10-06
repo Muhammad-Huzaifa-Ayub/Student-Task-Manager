@@ -1,4 +1,4 @@
-# Student Task Manager
+# Students Task Manager
 
 A simple web application to manage daily student tasks.
 
