@@ -1,4 +1,4 @@
-# Student Task System
+# Student Task Systems
 
 A simple web application to manage daily student tasks.
 
